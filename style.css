@@ -118,9 +118,34 @@ main {
 }
 
 
+.first-persion{
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    bottom: 72px;
+    z-index: 10;
+    left: 40px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+
+
 @media screen and (max-width:1400px) {
     main {
         width: 90%;
         margin: 0 auto;
+    }
+}
+
+@media screen and (max-width:700px) {
+    
+    #user-streams{
+        width: auto;
+        overflow: hidden;
+    }
+    .first-persion{
+        bottom: 110px;
+        left: 18px;
+        width: 150px;
     }
 }

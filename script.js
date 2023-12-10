@@ -110,8 +110,7 @@ let joinStreams = async () => {
                 document.getElementById(`volume-${speaker}`).src = './assets/volume-on.svg'
             }else{
                 document.getElementById(`volume-${speaker}`).src = './assets/volume-off.svg'
-            }
-            
+            }           
         
             
         }
@@ -126,7 +125,7 @@ let joinStreams = async () => {
     ])
     
     //#7 - Create player and add it to player list
-    let player = `<div class="video-containers" id="video-wrapper-${config.uid}">
+    let player = `<div class="video-containers " id="video-wrapper-${config.uid}" >
                         <p class="user-uid"><img class="volume-icon" id="volume-${config.uid}" src="./assets/volume-on.svg" /> ${config.uid}</p>
                         <div class="video-player player" id="stream-${config.uid}"></div>
                   </div>`
@@ -160,13 +159,16 @@ let handleUserJoined = async (user, mediaType) => {
         if (player != null){
             player.remove()
         }
- 
+        
         player = `<div class="video-containers" id="video-wrapper-${user.uid}">
-                        <p class="user-uid"><img class="volume-icon" id="volume-${user.uid}" src="./assets/volume-on.svg" /> ${user.uid}</p>
+                        <p class="user-uid" style="left: unset; right: 10px"><img class="volume-icon" id="volume-${user.uid}" src="./assets/volume-on.svg" /> ${user.uid}</p>
                         <div  class="video-player player" id="stream-${user.uid}"></div>
                       </div>`
         document.getElementById('user-streams').insertAdjacentHTML('beforeend', player);
-         user.videoTrack.play(`stream-${user.uid}`)
+
+        document.getElementById(`video-wrapper-${config.uid}`).classList.add('first-persion');
+
+        user.videoTrack.play(`stream-${user.uid}`)
 
         
 
@@ -185,5 +187,6 @@ let handleUserLeft = (user) => {
     //Remove from remote users and remove users video wrapper
     delete remoteTracks[user.uid]
     document.getElementById(`video-wrapper-${user.uid}`).remove()
+    document.getElementById(`video-wrapper-${config.uid}`).classList.remove('first-persion');
 }
 
