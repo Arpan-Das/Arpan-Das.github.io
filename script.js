@@ -4,11 +4,11 @@ let client = AgoraRTC.createClient({mode:'rtc', codec:"vp8"})
 //#2
 let config = {
     appid:"d669f7ae2f384af99e12a301289242fc",
-    token:"007eJxTYChfy9PGHa+0sFv6psyCpF7/KPEO8X+HS/9tDyu9Jdm68q0CQ4qZmWWaeWKqUZqxhUlimqVlqqFRorGBoZGFpZGJUVpyTVdpakMgI4PGjhhmRgYIBPE5GJIzEvPyUnMMGRgAgzIf5w==",
+    token:"007eJxTYKh58Dr8jdyBs1I5EqWdl0Q9V6q5/DTx8ziwMOm0px3D9dkKDClmZpZp5ompRmnGFiaJaZaWqYZGicYGhkYWlkYmRmnJV5WepTYEMjKo35/IxMgAgSA+C0NyhoEhAwMATD4e7w==",
     uid:null,
-    channel:"channel1",
+    channel:"ch01",
 }
-
+//lsdjflds
 //#3 - Setting tracks for when user joins
 let localTracks = {
     audioTrack:null,
