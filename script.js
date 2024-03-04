@@ -8,7 +8,7 @@ let config = {
     uid:null,
     channel:"ch01",
 }
-//lsdjflds
+
 //#3 - Setting tracks for when user joins
 let localTracks = {
     audioTrack:null,
